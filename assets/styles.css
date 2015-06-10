@@ -1,0 +1,149 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+
+body {
+	font-family: roboto, sans-serif;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+}
+
+.container {
+	text-align: center;
+	background: url(images/blue-sky.jpg) no-repeat;
+}
+
+header {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #fff;
+	color: #222;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(79,95,158,0.6);
+	box-shadow: 0 0 20px #4f5f9e;
+}
+
+header h1 {
+	font-weight: 300;
+	margin: 0;
+}
+
+footer {
+	background: #fff;
+	text-align: center;
+	border-top: 1px solid rgba(79,95,158,0.6);
+	box-shadow: 0 0 20px #4f5f9e;
+}
+
+footer p {
+	display: inline-block;
+	color: #555;
+	font-weight: 100;
+}
+
+footer:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+footer img {
+	height: 24px;
+	margin: 0 4px;
+	vertical-align: middle;
+}
+
+#search-form {
+	margin-top: 20px;
+}
+
+.results {
+	display: inline-block;
+}
+
+input {
+	background: rgba(255,255,255,0.6);
+	color: #4f5f9e;
+	font-weight: 100;
+	max-width: 80%;
+}
+
+::-webkit-input-placeholder {
+	padding-top: 4px;
+	color: rgba(79,95,158,0.2);
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+input, button {
+	display: inline-block;
+	box-sizing: border-box;
+	font: 300 30px/30px roboto, sans-serif;
+	height: 48px;
+	padding: 8px;
+	border: none;
+	border-radius: 2px;
+}
+
+input:active, input:focus {
+	outline:none;
+}
+
+button {
+	max-width: 16%;
+	background-color: #4f5f9e;
+	color: #fff;
+	cursor: default;
+	cursor: pointer;
+}
+
+.weather {
+	padding-top: 40px;
+	color: #fff;
+}
+
+.weather .location {
+	font-weight: 300;
+	font-size: 36px;
+	color: #fff;
+}
+
+.weather .conditions {
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+	margin: 20px 0;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 150px;
+	padding: 20px;	
+}
+
+.conditions .temp {
+	font-size: 100px;
+	font-weight: 100;
+	padding-left: 34px;
+}
+
+.conditions .summary {
+	font-size: 28px;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.conditions .highlow {
+	display: inline-block;
+	padding: 2px 16px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	font-weight: 300;
+}
+
+[data-icon]:before {
+	font-family: 'MeteoconsRegular';
+	font-size: 52px;
+	
+	content: attr(data-icon);
+}
+
+.pull-right {
+	float: right;
+}
