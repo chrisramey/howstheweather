@@ -16,24 +16,39 @@
 			<h1>How's the Weather?</h1>
 		</header>
 		<div id="search-form">
-			<form method="get" action="./">
+			<form method="get" action="index.php">
 				<input type="tel" name="zip" autocomplete="off" placeholder="zip">
 				<button type="submit">Go</button>
 			</form>
 		</div>
 		<div class="result">
+			<?php
+			if(!empty($_GET['zip'])) {
+				// Check to see if the client request includes a non-empty 'zip'.
+				// If so, they must have searched for a zip code. Proceed with fetching weather
+				include('weather.php');
+			} else {
+				// Client must be visiting the page for the first time, and has not
+				// searched for a zip code.
+				$location = '&nbsp;';
+				$temp = '&nbsp;';
+				$summary = '&nbsp;';
+				$high = '&nbsp;';
+				$low = '&nbsp;';
+			}
+			?>
 			<div class="weather">
 				<div class="location">
-					Chicago, IL
+					<?php echo $location ?>
 				</div>
 				<div class="conditions">
 					<div class="temp">
-						82&deg;
+						<?php echo $temp ?>
 					</div>
 					<div class="summary">
-						Sunny
+						<?php echo $summary ?>
 					</div>
-					<div class="highlow">86&deg; / 62&deg;</div>
+					<div class="highlow"><?php echo $high ?> / <?php echo $low ?></div>
 				</div>
 			</div>
 		</div>
