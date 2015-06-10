@@ -31,6 +31,7 @@
 				// Client must be visiting the page for the first time, and has not
 				// searched for a zip code.
 				$location = '&nbsp;';
+				$icon = '&nbsp;';
 				$temp = '&nbsp;';
 				$summary = '&nbsp;';
 				$high = '&nbsp;';
@@ -42,6 +43,7 @@
 					<?php echo $location ?>
 				</div>
 				<div class="conditions">
+					<div data-icon="<?php echo $icon ?>"></div>
 					<div class="temp">
 						<?php echo $temp ?>
 					</div>
